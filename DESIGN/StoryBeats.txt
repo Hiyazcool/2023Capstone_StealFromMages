@@ -1,0 +1,36 @@
+
+Level 1: 
+Player is tasked to steal {Mcguffin name} from {Mage Name}
+
+Player learns to move around and shoot things. 
+
+	** Need Nature Look Level Assets 
+	** Need Destroyable things 
+Player is introduced to Enemies 
+	** Need Enemies
+
+Player Reaches {Mage Name Fortress}
+
+Level 2:
+Player enters Fortress 
+Player Encounters "Vision" enemies 
+
+Player will get narrative\world building notes through out the level 
+
+
+Level 3
+Player Enters Fortress Center 
+Player finds out about the truth about {Mage Name}'s patron demands\wants\crazy stuff that {Mage Name} is using {Mcguffin Name}. 
+... the narriative set up for the Boss Battle 
+
+This is the Boss Battle 
+
+	** Need Brick and Garden Assets 
+	** Need Boss Flower 
+	** Need Blowupable things (Big Rocky explosion bits!?!)
+
+Post Battle Player gets {McGuffin} and some narrative that suggests bigger and grander adventures. 
+Does the Mcguffin talk to the player? (Outlander from Dishonored, but better writen to nudge the player to chaos) 
+
+
+If we get time, we should have story notes (particuarly in Level 2) about the Patron as having other people whom have gone insane by his instance of use of power in wild and crazy ways. Patron is an agent of chaos for their enjoyment. 

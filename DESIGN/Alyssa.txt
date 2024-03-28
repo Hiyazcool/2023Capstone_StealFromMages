@@ -1,0 +1,25 @@
+ALYSSA - ART IMPLEMENTATION
+
+splash screen w/ school logo and program
+
+create opening menu and navigation to level(s)
+
+create framework for tilesheets for level building, including a collision and non-collision layer
+
+animations
+	-character
+	-enemies
+	-attacks
+	-environment?
+
+temp tile maps for setting up
+	https://cainos.itch.io/pixel-art-top-down-basic
+
+
+//what have i done
+
+	-created sprite sheets
+	-set up tile maps and collision tile maps
+	-created animations from sprite sheets
+		-all slimes, spiders
+	-created scenes for each level, intro and ending
