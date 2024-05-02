@@ -80,9 +80,9 @@ public class PlayerHealth : MonoBehaviour, IHealth {
 
     private IEnumerator OnDeath() {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(7);
-        SceneManager.UnloadSceneAsync(3);
-        SceneManager.UnloadSceneAsync(5);
+        SceneManager.LoadScene(4);
+        SceneManager.UnloadSceneAsync(1);
+        SceneManager.UnloadSceneAsync(2);
         Destroy(Pathfinder.Instance.gameObject);
     }
 

@@ -48,6 +48,7 @@ public class EnemyHealth : MonoBehaviour, IHealth {
             //get out of hurt anim
             StartCoroutine(ReturnToDefaultStateAfterDelay(0.5f));
         }
+        
     }
     
     public bool ApplyHeal(float _heal) {
