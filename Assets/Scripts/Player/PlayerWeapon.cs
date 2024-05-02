@@ -39,7 +39,7 @@ public class PlayerWeapon : MonoBehaviour
     }
     void Update()
     {
-        input = InputPoller.reference.GetInput(0);
+        input = InputPoller.reference.GetInput(1);
         if (input.buttonEast) {
             weaponSlot += 1;
             if (weaponSlot >= weapons.Count) {
@@ -54,25 +54,30 @@ public class PlayerWeapon : MonoBehaviour
 
         }
         if (input.rightTrigger > triggerActAt && isOnCooldown && playerMana.UseMana(weapons[weaponSlot].Cost)) {
-            Vector2 relative = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(new Vector3(input.rightStick.x, input.rightStick.y, 1)));
-            ProjectileHandler.Instance.ShootProjectile(this.transform.position, relative.normalized, weapons[weaponSlot], ProjectileHandler.ProjectileTarget.Enemy);
-            TickSystem.Instance.CreateTimer(ResetCooldown, castCooldown);
-            isOnCooldown = false;
-            //play sound
-            if (weaponSlot == 0)
-            {
-                audioSource.PlayOneShot(attack1);
-            }
-            else
-            {
-                audioSource.PlayOneShot(attack2);
-            }
             
+            Vector2 relative = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(new Vector3(input.rightStick.x, input.rightStick.y, 1)));
+            Shoot(relative);
+        }
+        if (input.rightStick.magnitude > 0.5f && isOnCooldown && playerMana.UseMana(weapons[weaponSlot].Cost)) {
+            
+            Shoot(input.rightStick);
         }
         //float angle = Mathf.Atan2(relative.x, relative.z) * Mathf.Rad2Deg;
     }
     public void ResetCooldown() {
         isOnCooldown = true;
+    }
+    private void Shoot(Vector2 relative) {
+        ProjectileHandler.Instance.ShootProjectile(this.transform.position, relative.normalized, weapons[weaponSlot], ProjectileHandler.ProjectileTarget.Enemy);
+        TickSystem.Instance.CreateTimer(ResetCooldown, castCooldown);
+        isOnCooldown = false;
+        //play sound
+        if (weaponSlot == 0) {
+            audioSource.PlayOneShot(attack1);
+        } else {
+            audioSource.PlayOneShot(attack2);
+        }
+
     }
 
 }
